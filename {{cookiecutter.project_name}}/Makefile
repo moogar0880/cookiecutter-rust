@@ -14,10 +14,10 @@ endif
 
 {%- if cookiecutter.project_type == "service" -%}
 .PHONY: all
-all: clean vendor binary test
+all: clean vendor binary style test
 {% else -%}
 .PHONY: all
-all: clean vendor test
+all: clean vendor style test
 {% endif %}
 
 .PHONY: help
