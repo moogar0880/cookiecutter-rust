@@ -1,0 +1,6 @@
+[package]
+name = "{{cookiecutter.project_name}}"
+version = "0.1.0"
+authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
+
+[dependencies]

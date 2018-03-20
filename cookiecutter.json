@@ -1,0 +1,11 @@
+{
+    "project_name": "myrustproject",
+    "full_name": "Jon Nappi",
+    "email": "moogar0880@gmail.com",
+    "git_root": "github.com",
+    "github_username": "moogar0880",
+    "project_short_description": "A Rust project.",
+    "project_type": ["library", "service"],
+    "use_ci": ["travis", null],
+    "use_git": "y"
+}
