@@ -15,7 +15,7 @@ RE_OBJ = re.compile(PATTERN)
 def context():
     return {
         'full_name': 'Test Author',
-        'github_username': 'lacion',
+        'github_username': 'moogar0880',
         'project_name': 'MyTestProject',
         'project_short_description': 'A short description of the project.',
         "use_docker": "y",
@@ -54,7 +54,7 @@ def test_default_configuration(cookies, context):
     assert paths
     check_paths(paths)
 
-@pytest.fixture(params=['use_docker', 'use_git', 'use_logrus_logging', 'use_viper_config'])
+@pytest.fixture(params=['use_docker', 'use_git'])
 def feature_context(request, context):
     context.update({request.param: 'n'})
     return context
