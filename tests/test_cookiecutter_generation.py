@@ -57,7 +57,7 @@ def test_default_configuration(cookies, context):
     assert paths
     check_paths(paths)
 
-@pytest.fixture(params=['use_docker', 'use_git'])
+@pytest.fixture(params=['use_git'])
 def feature_context(request, context):
     context.update({request.param: 'n'})
     return context

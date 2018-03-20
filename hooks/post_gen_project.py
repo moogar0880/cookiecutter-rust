@@ -53,10 +53,6 @@ def remove_docker_files():
 # remove service specific files if we're writing a library
 if '{{ cookiecutter.project_type }}'.lower() == 'library':
     remove_file('src/main.rs')
-
-# 1. Remove Dockerfiles if docker is not going to be used
-if '{{ cookiecutter.use_docker }}'.lower() != 'y':
-    remove_docker_files()
     
 # 4. Remove unused ci choice
 if '{{ cookiecutter.use_ci}}'.lower() != 'travis':

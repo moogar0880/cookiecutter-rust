@@ -46,7 +46,6 @@ email [moogar0880@gmail.com]: moogar0880@gmail.com
 git_root [github.com]: github.com
 github_username [moogar0880]: moogar0880
 project_short_description [A Rust project.]: Rusty Echo Server
-use_docker [y]: y
 use_git [y]: y
 Select use_ci:
 1 - travis
@@ -66,7 +65,3 @@ $ make help
 $ make build
 $ ./bin/echoserver
 ```
-
-## Projects build with cookiecutter-rust
-
-- [iothub](https://github.com/moogar0880/iothub) websocket multiroom server for IoT
