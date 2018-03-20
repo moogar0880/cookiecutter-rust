@@ -48,7 +48,7 @@ def check_paths(paths):
 
 def test_default_configuration(cookies, context):
     result = cookies.bake(extra_context=context)
-    assert result.exit_code == 0
+    assert result.exit_code == 0, result.exception
     assert result.exception is None
     assert result.project.basename == context['project_name']
     assert result.project.isdir()
@@ -64,7 +64,7 @@ def feature_context(request, context):
 
 def test_disable_features(cookies, feature_context):
     result = cookies.bake(extra_context=feature_context)
-    assert result.exit_code == 0
+    assert result.exit_code == 0, result.exception
     assert result.exception is None
     assert result.project.basename == feature_context['project_name']
     assert result.project.isdir()
