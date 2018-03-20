@@ -72,9 +72,7 @@ binary:
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	cargo build
-{%- endif -%}
 
-{% if cookiecutter.use_docker == "y" -%}
 .PHONY: package
 package:
 	@echo "building image ${BIN_NAME} ${VERSION} $(GIT_COMMIT)"
