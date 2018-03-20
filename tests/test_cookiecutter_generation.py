@@ -14,12 +14,15 @@ RE_OBJ = re.compile(PATTERN)
 @pytest.fixture
 def context():
     return {
-        'full_name': 'Test Author',
-        'github_username': 'moogar0880',
         'project_name': 'MyTestProject',
+        'full_name': 'Test Author',
+        'email': 'me@example.com',
+        'git_root': 'github.com',
+        'github_username': 'moogar0880',
         'project_short_description': 'A short description of the project.',
-        "use_docker": "y",
-        "use_git": "y"
+        'project_type': 'library',
+        'use_ci': 'travis',
+        'use_git': 'y',
 }
 
 def build_files_list(root_dir):
@@ -38,7 +41,7 @@ def check_paths(paths):
     for path in paths:
         if is_binary(path):
             continue
-        for line in open(path, 'r', encoding="latin-1"):
+        for line in open(path, 'r', encoding='latin-1'):
             match = RE_OBJ.search(line)
             msg = 'cookiecutter variable not replaced in {}'
             assert match is None, msg.format(path)
